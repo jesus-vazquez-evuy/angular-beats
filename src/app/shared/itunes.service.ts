@@ -54,4 +54,16 @@ export class ItunesService {
         })
       );
   }
+
+  getMultipleAlbums(albumIds: number[]) {
+    const idList = albumIds.join(',');
+    return this.http
+      .jsonp(
+        `${API.LOOKUP}callback=JSONP_CALLBACK&id=${idList}`,
+        'jsonp'
+      )
+      .pipe(
+        map(data => data['results'].filter(result => result.wrapperType === 'collection'))
+      );
+  }  
 }

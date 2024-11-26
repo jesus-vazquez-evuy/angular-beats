@@ -2,10 +2,37 @@
   margin-top: 80px;
   margin-bottom: 120px;
 }
+
 .mat-elevation-z3 {
   position: fixed;
   z-index: 2;
   background: #fff;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #000; 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease; 
+
+  &:hover {
+    color: #ffcc00; 
+  }
+
+  &:focus {
+    outline: none; 
+    color: #000; 
+  }
+
+  &:active {
+    color: #ffcc00; 
+  }
+}
+
+.header-text {
+  display: inline;
 }
 
 @media (min-width: 768px) {
@@ -15,7 +42,7 @@
 }
 @media (max-width: 768px) {
   .header-text {
-    display: hidden;
+    display: none;
   }
 }
 
@@ -49,10 +76,32 @@
   transition: border 0.1s ease-out;
 }
 
+.artist-link {
+  text-decoration: none;
+  color: #000; 
+  display: block; 
+  cursor: pointer;
+  transition: color 0.2s ease; 
+
+  &:hover {
+    color: #ffcc00; 
+  }
+
+  &:focus {
+    outline: none; 
+  }
+
+  &:active {
+    color: #ffcc00; 
+  }
+}
+
+
 .music-control {
   position: fixed;
   bottom: 0;
   height: 100px;
+  background-color: #121212;
 }
 
 .search-result {
